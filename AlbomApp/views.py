@@ -4,7 +4,6 @@ from .models import Category, Photo
 
 def gallery(request):
     category = request.GET.get('category')
-    print(category)
     if category is None:
         photos = Photo.objects.all()
 

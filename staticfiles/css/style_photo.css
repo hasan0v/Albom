@@ -1,0 +1,10 @@
+img{
+    background-color: rgb(238, 255, 0);
+    position: relative;
+    height: 100%;
+    width: 80%;
+}
+
+.container {
+    background-color: rgb(255, 72, 0);
+}
