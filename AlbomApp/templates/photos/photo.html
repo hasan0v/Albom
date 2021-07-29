@@ -6,19 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/style_photo.css' %}" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
 </head>
 <body class="m-5">
+    <div class="col-3">
+        <a href="{% url 'gallery' %}" class="btn btn-lg my-3"><i class="fas fa-arrow-left"></i></a>
+    </div>
     <div class="container">
-        <div class="row justify-content-center">
-            <a href="{% url 'gallery' %}" class="btn btn-outline-danger my-3">Geri</a>
-            <div  class="col-6">
 
+        <div class="row">
+            <div  class="col-6">
                 <img class="image-thumbnail" src="{{photo.image.url}}" alt="{{photo.image.name}}">
+            </div>
+
+            <div  class="col-6">
+                <p id="tesvir">{{photo.description}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-5">
 
             </div>
-           
+            <div class="col-3 mt-5">
+                <a class="btn btn-lg yukle" href="{{photo.image.url}}" download>Yüklə</a>
+            </div>
+
         </div>
     </div>
 </body>

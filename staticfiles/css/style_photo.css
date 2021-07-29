@@ -6,5 +6,6 @@ img{
 }
 
 .container {
-    background-color: rgb(255, 72, 0);
+    background-color: #ff4800;
+    border-radius: 20%;
 }
