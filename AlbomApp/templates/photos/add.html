@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Add new photo</title>
+    <link rel="stylesheet" href="{% static 'css/style_add.css' %}" type="text/css">
+    <script>
+//     class PhotoSubmission {
+//     constructor() {
+//         const inputs = document.querySelectorAll('.js-photo_submit-input');
+
+//         for (var i = 0; i < inputs.length; i++) {
+//             inputs[i].addEventListener('change', this.uploadImage);
+//         }
+//     }
+
+//     uploadImage(e) {
+//         const fileInput = e.target;
+//         const uploadBtn = fileInput.parentNode;
+//         const deleteBtn = uploadBtn.childNodes[7];
+
+//         const reader = new FileReader();
+
+//         reader.onload = function(e) {
+//             uploadBtn.setAttribute('style', `background-image: url('${e.target.result}');`);
+//             uploadBtn.classList.add('photo_submit--image');
+//             fileInput.setAttribute('disabled', 'disabled');
+//         };
+
+//         reader.readAsDataURL(e.target.files[0]);
+
+//         deleteBtn.addEventListener('click', () => {
+//             uploadBtn.removeAttribute('style');
+//             uploadBtn.classList.remove('photo_submit--image');
+            
+//             setTimeout(() => {
+//                 fileInput.removeAttribute('disabled', 'disabled');
+//             }, 200);
+//         });
+//     }
+// };
+
+// new PhotoSubmission;
+    </script>
 </head>
 <body class="m-5">
     <div class="container">
@@ -22,29 +62,19 @@
                             <input name="description" type="text" placeholder="Şəkil üçün təsvir yaz..." class="form-control" >
                         </div>
 
-                        <div class="form-group m-3">
-                            <label >Kateqoriya seç :</label>
-                            <select name="category" class="form-control">
-                                <option  value="none">
-                                    Kateqoriya seç...
-                                </option>
-                                {% for category in categories %}
-                                <option value="{{category.id}}">
-                                    {{category.name}}
-                                </option>
-                                {% endfor %}
-                            </select>
-                        </div>
-
-                        <div class="form-group m-3">
-                            <label >Yeni kateqoriya yarat :</label>
-                            <input  name="category_new" type="text" placeholder="Yeni kateqoriya yarat..." class="form-control" >
-                        </div>
-
-
-                        <div class="form-group m-3">
-                          <label >Yüklə</label>
-                          <input required name="image" type="file" class="form-control-file" accept="image/png, image/gif, image/jpeg" >
+                        <div class="form-group m-3 secim">
+                            <div class="wrapper">
+                                <div class="photo_submit-container">
+                                    <div class="photo_submit-container">
+                                        <label class="photo_submit js-photo_submit1">
+                                            <input class="photo_submit-input js-photo_submit-input" name='image' type="file" accept="image/*">
+                                            <span class="photo_submit-plus"></span>
+                                            <span class="photo_submit-uploadLabel">Upload photo</span>
+                                            <span class="photo_submit-delete"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <button type="submit" class="btn btn-primary m-3 btn-block">
@@ -58,3 +88,11 @@
     
 </body>
 </html>
+
+
+
+
+
+
+
+

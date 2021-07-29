@@ -1,19 +1,21 @@
-from django.shortcuts import render, redirect
-from .models import Category, Photo
+from django.shortcuts import render, redirect, HttpResponse
+from .models import Photo
+from django.template import RequestContext
+
 # Create your views here.
 
 def gallery(request):
-    category = request.GET.get('category')
-    if category is None:
-        photos = Photo.objects.all()
+    # category = request.GET.get('category')
+    # if category is None:
+    #     photos = Photo.objects.all()
 
-    else:
-        photos = Photo.objects.filter(category__name=category)
-
-
-    categories = Category.objects.all()
-    context = {'categories':categories, 'photos':photos}
-    return render(request, 'photos/gallery.html', context)
+    # else:
+    #     photos = Photo.objects.filter(category__name=category)
+    photos = Photo.objects.all()
+    # print(photos)
+    # categories = Category.objects.all()
+    context = {'photos':photos}
+    return render(request, 'photos/gallery.html', {'photos':photos})
 
 def ViewPhoto(request, pk):
         photo = Photo.objects.get(id=pk)
@@ -22,24 +24,19 @@ def ViewPhoto(request, pk):
 
 
 def AddPhoto(request):
-    categories = Category.objects.all()
+
     if request.method == 'POST':
         data = request.POST
         image = request.FILES.get('image')
-        if data['category'] != 'none':
-            category = Category.objects.get(id=data['category'])
-        elif data['category_new'] != '':
-            category, created = Category.objects.get_or_create()
-        else:
-            category = None
-
-
+        print(data)
         photo = Photo.objects.create(
-            category = category,
-            description = data['description'],
             image = image,
+            description = data['description'],
+
         )
         return redirect('gallery')
-    context = {'categories':categories}
 
-    return render(request, 'photos/add.html', context)
+
+
+
+    return render(request, 'photos/add.html')

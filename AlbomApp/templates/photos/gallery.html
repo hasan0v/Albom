@@ -14,38 +14,30 @@
 <body class="m-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
-                <div class="card my-2 mt-5">
-                    <div class="card-header">
-                      Kateqoriyalar
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <a href="{% url 'gallery' %}"> <li class="list-group-item">All</li></a>
-                      {% for category in categories %}
-                      <a href="{% url 'gallery' %}?category={{category.name}}"><li class="list-group-item">{{category.name}}</li></a>
-                      {% endfor %}
-                      <a href="{% url 'add' %}"class="btn btn-primary btn-sm btn-block m-1" >
-                              Şəkil yüklə
+            <div class="col-md-1 m-0">
+                      <a href="{% url 'add' %}" class="btn btn-sm btn-block m-3 yukle" >
+                              Əlavə et
                     </a>
-                      
-                    </ul>
-                  </div>
             </div>
-
-            <div class="col-md-9">
+            <div class="col-md-1 m-0">
+                <a href="/admin" class="btn btn-sm btn-block m-3 admin" >
+                        Admin
+              </a>
+            </div>
+            <div class="col-md-11">
                 <div class="row">
                     {% for photo in photos %}
+                    {% if photo.image %}
                     <div class="col-md-4">
                         <div class="bla mt-5 align-items-center">
                             <img class="image-thumbnail" src="{{photo.image.url}}" alt="Card image cap">
                         </div>
                         <div class="bla my-0 align-items-center">
-                            <a href="{% url 'photo' photo.id %}" class='btn btn-outline-dark btn-lg m-4'>Bax</a>
+                            <a href="{% url 'photo' photo.id %}" class='btn btn-lg m-4'>Bax</a>
                         </div>
                         
                     </div>
-                    {% empty %}
-                    <h2>NOPE</h2>
+                    {% endif %}
                     {%endfor %}
                 </div>
             </div>

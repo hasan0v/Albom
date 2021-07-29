@@ -1,10 +1,41 @@
 img{
-    background-color: rgb(238, 255, 0);
+    background-color: #FFF275;
     position: relative;
+    box-shadow: 8px 8px 12px rgb(0, 0, 0);
     height: 100%;
-    width: 80%;
+    width: 100%;
+    border: 4px solid rgb(255, 255, 255);
 }
 
 .container {
-    background-color: rgb(255, 72, 0);
+
+    height: 700px;
+    width: 100%;
 }
+#tesvir{
+    margin-left: 20px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-shadow: 1px 1px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    /* background-color: #FFF275; */
+    /* box-shadow: 8px 8px 12px rgb(255, 255, 255); */
+
+}
+body{
+  background-color: #FF8C42;
+}
+.btn-lg{
+
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    width: 100px;
+    border-radius: 13px;
+  }
+.btn-lg:hover{
+    background-color: #FFFFFFFF;
+    color: #FF8C42;
+    border: 3px solid #FF8C42;
+
+
+  }

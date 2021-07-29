@@ -5,13 +5,15 @@
 }
 /* Colorize-zoom Container */
 .bla, .btn-outline-dark{
-  background-color: rgb(95, 95, 95);
+  background-color: #ffffff;
   overflow: hidden;
   color: white;
+  box-shadow: 8px 8px 12px rgb(0, 0, 0);
+
 }
 img {
     transition: transform .5s, filter 1.5s ease-in-out;
-    filter: grayscale(100%);
+    filter: grayscale(80%);
     transform: scale(1)
 
   }
@@ -22,6 +24,50 @@ img:hover {
     transform: scale(1.3);
   }
 body {
-    background-color: black;
+  background-color: #FF8C42;
 }
+.btn-lg{
+  border: 3px solid #FF8C42;
+  color: #FF8C42;
+}
+.btn-lg:hover{
+  background-color: #FF8C42;
+  color: white;
+}
+.yukle{
+    background-color: #ffffff;
+    color: #ff8c42;
+    position: fixed;
+    height: 40px;
+    font-size: 20px;
+    width: 8%;
+    top: 85px;
+    text-align: right;
+    left: -40px; 
+    transition: transform .5s, filter 1.5s ease-in-out;
+}
+.yukle:hover{
+  text-align: center;
+  transform: scale(1.1);
+  left: -15px;
+  color: #FF8C42;
+}
+.admin{
+  background-color: #ffffff;
+  color: #ff8c42;
+  position: fixed;
+  height: 40px;
+  font-size: 20px;
+  width: 8%;
+  top: 135px;
+  left: -70px; 
+  text-align: right;
+  transition: transform 1s;
+}
+.admin:hover{
+  transform: scale(1.1);
+  left: -15px;
+  color: #FF8C42;
+  text-align: center;
 
+}
