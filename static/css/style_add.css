@@ -81,7 +81,7 @@ body{
 }
 .photo_submit-plus:after {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-46%, -52%);
   content: "+";
@@ -94,7 +94,7 @@ body{
 .photo_submit-uploadLabel {
   margin-top: 1rem;
   font-size: 21px;
-  color: cadetblue;
+  color: #ff8c42;
   letter-spacing: 0.03em;
   pointer-events: none;
 }
@@ -134,4 +134,57 @@ body{
 }
 .photo_submit--image .photo_submit-delete {
   display: inline-block;
+}
+.geri{
+
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  width: 100px;
+  border-radius: 13px;
+}
+.geri:hover{
+  background-color: #FFFFFFFF;
+  color: #FF8C42;
+  border: 3px solid #FF8C42;
+
+
+}
+.card{
+  background-color: #ffffff;
+  color: #ff8c42;
+  font-family: 'PT Sans Narrow', sans-serif;
+
+}
+.desc{
+  background-color: #ff8c42;
+  color: #ffffff;
+}
+.desc::placeholder{ 
+  color: #ffffff;
+}
+.add{
+  background-color: #ffffff;
+  border: 3px solid #ff8c42;
+  border-radius: 13px;
+  color: #ff8c42;
+  position: relative;
+  left: 29.5%;
+}
+.add:hover{
+  background-color: #ff8c42;
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  border: 3px solid #FF8C42;
+}
+
+
+
+
+
+
+#pre{
+  display: block;
+  position: relative;
+  height: 30%;
+  width: 100%;
 }
