@@ -15,11 +15,11 @@ def gallery(request):
     # print(photos)
     # categories = Category.objects.all()
     context = {'photos':photos}
-    return render(request, 'photos/gallery.html', {'photos':photos})
+    return render(request, 'gallery.html', {'photos':photos})
 
 def ViewPhoto(request, pk):
         photo = Photo.objects.get(id=pk)
-        return render(request, 'photos/photo.html', {'photo':photo})
+        return render(request, 'photo.html', {'photo':photo})
 
 
 
@@ -39,4 +39,4 @@ def AddPhoto(request):
 
 
 
-    return render(request, 'photos/add.html')
+    return render(request, 'add.html')
