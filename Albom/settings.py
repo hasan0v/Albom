@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'Albom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',#_psycopg2
-        'NAME': 'BlogDB',
+        'NAME': 'AlbomDB',
         'USER': 'postgres',
         'PASSWORD': 1202,
         'HOST': 'localhost',
