@@ -67,6 +67,3 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 - Thanks to the Django community for their support and resources.
 
----
-
-For more details, visit the [Album GitHub Repository](https://github.com/hasan0v/Enactus).
